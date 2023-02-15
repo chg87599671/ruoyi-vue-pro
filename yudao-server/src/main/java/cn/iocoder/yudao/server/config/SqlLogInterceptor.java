@@ -102,6 +102,7 @@ public class SqlLogInterceptor implements Interceptor {
                 .replaceAll(" FROM", "\n FROM")
                 .replaceAll(" WHERE", "\n WHERE")
                 .replaceAll(" VALUES", "\n VALUES")
+                .replaceAll(" LIMIT", "\n LIMIT")
                 ;
         // 高亮打印sql
         System.err.println(String.format("==>> 方法\t%s\t执行sql: \n %s ;\n", methodPath.replace(STR_PRINT_IGNORE, ""), printStr));
