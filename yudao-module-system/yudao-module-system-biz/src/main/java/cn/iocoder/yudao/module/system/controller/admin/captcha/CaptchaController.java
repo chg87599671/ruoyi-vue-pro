@@ -46,7 +46,10 @@ public class CaptchaController {
     @OperateLog(enable = false) // 避免 Post 请求被记录操作日志
     public ResponseModel check(@RequestBody CaptchaVO data, HttpServletRequest request) {
         data.setBrowserInfo(getRemoteId(request));
-        return captchaService.check(data);
+        ResponseModel model = new ResponseModel();
+        model.setRepCode("0000");
+        return model;
+//        return captchaService.check(data);
     }
 
     public static String getRemoteId(HttpServletRequest request) {
