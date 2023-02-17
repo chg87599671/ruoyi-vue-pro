@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
 
 /**
  * mybatis sql打印插件
@@ -94,7 +95,7 @@ public class SqlLogInterceptor implements Interceptor {
                 } else {
                     value = String.format("'%s'", value);
                 }
-                sql = sql.replaceFirst("\\?", String.valueOf(value));
+                sql = sql.replaceFirst("\\?", Matcher.quoteReplacement(String.valueOf(value)));
             }
         }
         String printStr = sql.replace("\n", "") //减少换行
