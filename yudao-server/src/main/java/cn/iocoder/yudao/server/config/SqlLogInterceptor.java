@@ -98,7 +98,7 @@ public class SqlLogInterceptor implements Interceptor {
                 sql = sql.replaceFirst("\\?", Matcher.quoteReplacement(String.valueOf(value)));
             }
         }
-        String printStr = sql.replace("\n", "") //减少换行
+        String printStr = sql.replace("\n", " ") //减少换行
                 .replaceAll(" +", " ")//压缩空格
                 .replaceAll(" FROM", "\n FROM")
                 .replaceAll(" WHERE", "\n WHERE")
