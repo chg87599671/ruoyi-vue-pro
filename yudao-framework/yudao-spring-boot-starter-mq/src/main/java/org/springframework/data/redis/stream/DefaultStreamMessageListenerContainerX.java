@@ -23,7 +23,7 @@ public class DefaultStreamMessageListenerContainerX<K, V extends Record<K, ?>> e
     /**
      * 参考 {@link StreamMessageListenerContainer#create(RedisConnectionFactory, StreamMessageListenerContainerOptions)} 的实现
      */
-    public static <K, V extends Record<K, ?>> StreamMessageListenerContainer<K, V> create(RedisConnectionFactory connectionFactory, StreamMessageListenerContainer.StreamMessageListenerContainerOptions<K, V> options) {
+    public static <K, V extends Record<K, ?>> StreamMessageListenerContainer<K, V> create(RedisConnectionFactory connectionFactory, StreamMessageListenerContainerOptions<K, V> options) {
         Assert.notNull(connectionFactory, "RedisConnectionFactory must not be null!");
         Assert.notNull(options, "StreamMessageListenerContainerOptions must not be null!");
         return new DefaultStreamMessageListenerContainerX<>(connectionFactory, options);

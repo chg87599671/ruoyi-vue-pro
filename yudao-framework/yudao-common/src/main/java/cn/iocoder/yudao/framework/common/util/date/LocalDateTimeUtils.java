@@ -6,7 +6,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 /**
- * 时间工具类，用于 {@link java.time.LocalDateTime}
+ * 时间工具类，用于 {@link LocalDateTime}
  *
  * @author 芋道源码
  */

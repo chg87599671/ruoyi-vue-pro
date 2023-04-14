@@ -81,6 +81,7 @@ public class WebSocketServer {
      */
     @OnMessage
     public void onMessage(Session session, String message) {
+        log.info("websocket msg :[{}]",message);
         WebSocketUsers.sendMessage(session, "接收内容：" + message);
     }
 }

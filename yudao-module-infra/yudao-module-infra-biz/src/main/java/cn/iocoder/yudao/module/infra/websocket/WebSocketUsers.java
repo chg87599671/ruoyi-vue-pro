@@ -123,7 +123,7 @@ public class WebSocketUsers {
         try {
             if (session.isOpen()) {
                 // TODO 需要加synchronized锁（synchronized(session)）？单个session创建线程？
-                session.getBasicRemote().sendText(message);
+                session.getBasicRemote().sendText(message+" from server");
             } else {
                 log.warn("用户【session={}】不在线", session.getId());
             }

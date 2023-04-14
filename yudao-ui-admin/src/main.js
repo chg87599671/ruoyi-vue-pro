@@ -13,7 +13,6 @@ import plugins from './plugins' // plugins
 
 import './assets/icons' // icon
 import './permission' // permission control
-import './tongji' // 百度统计
 import { getDicts } from "@/api/system/dict/data";
 import { getConfigKey } from "@/api/infra/config";
 import { parseTime, resetForm, handleTree, addBeginAndEndTime, divide} from "@/utils/ruoyi";
@@ -35,7 +34,6 @@ Vue.prototype.getDictDatas2 = getDictDatas2
 Vue.prototype.getDictDataLabel = getDictDataLabel
 Vue.prototype.DICT_TYPE = DICT_TYPE
 Vue.prototype.handleTree = handleTree
-Vue.prototype.addBeginAndEndTime = addBeginAndEndTime
 Vue.prototype.divide = divide
 
 // 全局组件挂载
@@ -54,22 +52,6 @@ Vue.use(plugins)
 Vue.use(VueMeta)
 // Vue.use(hljs.vuePlugin);
 
-// bpmnProcessDesigner 需要引入
-import MyPD from "@/components/bpmnProcessDesigner/package/index.js";
-Vue.use(MyPD);
-import "@/components/bpmnProcessDesigner/package/theme/index.scss";
-import "bpmn-js/dist/assets/diagram-js.css";
-import "bpmn-js/dist/assets/bpmn-font/css/bpmn.css";
-import "bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css";
-import "bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css";
-
-// Form Generator 组件需要使用到 tinymce
-import Tinymce from '@/components/tinymce/index.vue'
-Vue.component('tinymce', Tinymce)
-import '@/assets/icons'
-import request from "@/utils/request" // 实现 form generator 使用自己定义的 axios request 对象
-console.log(request)
-Vue.prototype.$axios = request
 import '@/styles/index.scss'
 
 // 默认点击背景不关闭弹窗

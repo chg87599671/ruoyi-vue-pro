@@ -3,7 +3,7 @@ package cn.iocoder.yudao.framework.common.util.object;
 import cn.iocoder.yudao.framework.common.pojo.PageParam;
 
 /**
- * {@link cn.iocoder.yudao.framework.common.pojo.PageParam} 工具类
+ * {@link PageParam} 工具类
  *
  * @author 芋道源码
  */

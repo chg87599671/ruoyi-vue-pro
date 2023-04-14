@@ -21,7 +21,7 @@ public class BannerApplicationRunner implements ApplicationRunner {
         ThreadUtil.execute(() -> {
             ThreadUtil.sleep(1, TimeUnit.SECONDS); // 延迟 1 秒，保证输出到结尾
             log.info("\n----------------------------------------------------------\n\t" +
-                            "项目启动成功！\n\t" +
+                            "【精简版】启动成功！\n\t" +
                             "接口文档: \t{} \n\t" +
                             "开发文档: \t{} \n\t" +
                             "视频教程: \t{} \n\t" +
@@ -31,23 +31,6 @@ public class BannerApplicationRunner implements ApplicationRunner {
                     "https://doc.iocoder.cn",
                     "https://t.zsxq.com/02Yf6M7Qn",
                     "https://t.zsxq.com/02B6ujIee");
-
-            // 数据报表
-            if (isNotPresent("cn.iocoder.yudao.module.report.framework.security.config.SecurityConfiguration")) {
-                System.out.println("[报表模块 yudao-module-report - 已禁用][参考 https://doc.iocoder.cn/report/ 开启]");
-            }
-            // 工作流
-            if (isNotPresent("cn.iocoder.yudao.framework.flowable.config.YudaoFlowableConfiguration")) {
-                System.out.println("[工作流模块 yudao-module-bpm - 已禁用][参考 https://doc.iocoder.cn/bpm/ 开启]");
-            }
-            // 微信公众号
-            if (isNotPresent("cn.iocoder.yudao.module.mp.framework.mp.config.MpConfiguration")) {
-                System.out.println("[微信公众号 yudao-module-mp - 已禁用][参考 https://doc.iocoder.cn/mp/build/ 开启]");
-            }
-            // 商城
-            if (isNotPresent("cn.iocoder.yudao.module.trade.framework.web.config.TradeWebConfiguration")) {
-                System.out.println("[商城系统 yudao-module-mall - 已禁用][参考 https://doc.iocoder.cn/mall/build/ 开启]");
-            }
         });
     }
 
